@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.coorchice.library.SuperTextView
+        android:id="@+id/superTextView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/line"
+        app:layout_constraintEnd_toEndOf="@+id/line"
+        app:layout_constraintStart_toStartOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/line"
+        app:stv_corner="15dp"
+        app:stv_solid="#000000" />
+
+
+    <TextView
+        android:id="@+id/tx_action_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试一"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/superTextView"
+        app:layout_constraintStart_toEndOf="@+id/superTextView" />
+
+    <TextView
+        android:id="@+id/tx_action_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试一"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/superTextView"
+        app:layout_constraintEnd_toStartOf="@+id/superTextView" />
+
+    <TextView
+        android:id="@+id/tx_action_time_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_action_right"
+        android:text="2015-07-12 20:34:34"
+        android:textColor="#8e8e8e"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/superTextView"
+        app:layout_constraintTop_toBottomOf="@+id/superTextView" />
+
+    <TextView
+        android:id="@+id/tx_action_time_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_action_right"
+        android:text="2015-07-12 20:34:34"
+        android:textColor="#8e8e8e"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/superTextView"
+        app:layout_constraintTop_toBottomOf="@+id/superTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
